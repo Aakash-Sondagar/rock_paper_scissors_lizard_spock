@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Sheldon Copper's Game</title>
+
+</head>
+<body>
+    <p id="demo">This only shows when the window is more than 500.</p>
+    <p id="message" style="display: none;">It is recommended use this on a desktop.</p>
+    <div class="wrapper">
+        <div class="header">
+            <div id="mySidenav" class="sidenav">
+                <a href="#" id="rules">
+                    Rules
+                    <iframe src="https://gifer.com/embed/1zq5" width=480 height=425 frameBorder="0" allowFullScreen>
+                    </iframe>
+                </a>  
+            </div>
+            <h1>Sheldon Copper Presents</h1>
+            
+        </div>
+        <div class="scoreboard">
+            <div class="title">
+                <img src="./assets/title.png" alt="title" width="150" height="150">
+            </div>
+            <div class="score">
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+        <div class="hands">
+            <div class="hand rock">
+                <img src="./assets/rock.png" alt="rock" onclick="pickUserhand('rock')">
+            </div>
+            <div class="hand paper">
+                <img src="./assets/paper.png" alt="paper" onclick="pickUserhand('paper')">
+            </div>
+            <div class="hand scissor">
+                <img src="./assets/scissor.png" alt="scissor" onclick="pickUserhand('scissor')">
+            </div>
+            <div class="hand lizard">
+                <img src="./assets/lizard.png" alt="lizard" onclick="pickUserhand('lizard')">
+            </div>
+            <div class="hand spock">
+                <img src="./assets/spock.png" alt="spock" onclick="pickUserhand('spock')">
+            </div>
+        </div>
+        <div class="contest" style="display: none">
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handimagecontainer">
+                    <img id="userPickImage" src="./assets/paper.png">
+                </div>
+            </div>
+            <div class="result">
+                <div class="decision"><h1> YOU WIN! </h1></div>
+                <div class="newGame" onclick="restartGame()">
+                    PLAY AGAIN
+                </div>
+            </div>
+            <div class="computer">
+                <h1>CPU PICKED</h1>
+                <div class="handimagecontainer">
+                    <img id="computerPickImage" src='./assets/Paper.png' /> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
